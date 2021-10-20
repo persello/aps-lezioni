@@ -5,6 +5,7 @@ class Date {
   // Sembra che abbia tre operandi ma in realtà, essendo una funzione esterna,
   // ne ha due.
   friend bool operator==(const Date &, const Date &);
+  friend bool operator<(const Date &, const Date &);
 
 public:
   Date(unsigned d, unsigned m, unsigned y);
