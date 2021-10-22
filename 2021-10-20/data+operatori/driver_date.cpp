@@ -33,7 +33,7 @@ int main() {
   d += -10;
   Date d2 = d + 10;
 
-  cout << "Nuova data successiva di 10 giorni: " << d2.Day() << "/"
+  cout << "Nuova data: " << d2.Day() << "/"
        << d2.Month() << "/" << d2.Year() << endl;
 
   cout << "d e d2 " << (d == d2 ? "" : "non ") << "sono uguali" << endl;
