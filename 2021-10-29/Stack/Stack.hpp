@@ -10,10 +10,11 @@ class Stack {
 public:
   Stack();
   Stack(const Stack &);
-  // ~Stack();
-  void Push(const int &);
-  void Pop() { top--; }
-  int Top() const { return vec[top]; }
+  ~Stack();
+  Stack& operator=(const Stack &);
+  Stack& Push(const int &);
+  Stack& Pop();
+  int Top() const;
   bool IsEmpty() const { return top == -1; }
 
 private:

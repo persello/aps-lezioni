@@ -10,7 +10,7 @@ Stack::Stack() {
   vec = new int[size];
 }
 
-Stack::Stack(const Stack& s) {
+Stack::Stack(const Stack &s) {
   top = s.top;
   size = s.size;
   vec = new int[size];
@@ -19,7 +19,24 @@ Stack::Stack(const Stack& s) {
   }
 }
 
-void Stack::Push(const int &val) {
+Stack::~Stack() { delete[] vec; }
+
+Stack &Stack::operator=(const Stack &s) {
+  if (s.top >= size) {
+    delete[] vec;
+    size = s.size;
+    vec = new int[size];
+  }
+
+  top = s.top;
+
+  for (int i = 0; i <= top; i++) {
+    vec[i] = s.vec[i];
+  }
+  return *this;
+}
+
+Stack &Stack::Push(const int &val) {
   if (top == size - 1) {
     int *aux_vec = new int[size * 2];
     for (int i = 0; i < size; i++) {
@@ -32,6 +49,25 @@ void Stack::Push(const int &val) {
 
   top++;
   vec[top] = val;
+
+  return *this;
+}
+
+Stack &Stack::Pop() {
+  if (top == -1) {
+    throw logic_error("Stack is empty");
+  }
+
+  top--;
+  return *this;
+}
+
+int Stack::Top() const {
+  if (top == -1) {
+    throw logic_error("Stack is empty");
+  }
+
+  return vec[top];
 }
 
 ostream &operator<<(ostream &os, const Stack &s) {
