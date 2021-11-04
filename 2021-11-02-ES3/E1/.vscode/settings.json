@@ -1,0 +1,12 @@
+{
+  "makefile.launchConfigurations": [
+    {
+      "cwd": "/Users/riccardo/Documents/Università/Analisi e Progettazione del Software/Lezioni/2021-11-02-ES3/E1",
+      "binaryPath": "/Users/riccardo/Documents/Università/Analisi e Progettazione del Software/Lezioni/2021-11-02-ES3/E1/main",
+      "binaryArgs": []
+    }
+  ],
+  "makefile.extensionOutputFolder": "./.vscode",
+  "lldb.displayFormat": "auto",
+  "lldb.dereferencePointers": true
+}
