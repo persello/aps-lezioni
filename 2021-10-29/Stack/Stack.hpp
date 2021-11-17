@@ -11,9 +11,9 @@ public:
   Stack();
   Stack(const Stack &);
   ~Stack();
-  Stack& operator=(const Stack &);
-  Stack& Push(const int &);
-  Stack& Pop();
+  Stack &operator=(const Stack &);
+  Stack &Push(const int &);
+  Stack &Pop();
   int Top() const;
   bool IsEmpty() const { return top == -1; }
 
