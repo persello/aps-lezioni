@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-long double RadiceQuadrata(unsigned, long double, unsigned &);
+long double RadiceQuadrata(unsigned, long double, unsigned&);
 
 int main() {
-  int n;
+  int         n;
   long double result;
-  unsigned iterations;
+  unsigned    iterations;
 
   do {
     cout << "Inserire un numero intero positivo: ";
@@ -19,14 +19,15 @@ int main() {
        << " iterazioni)." << endl;
 }
 
-long double RadiceQuadrata(unsigned n, long double epsilon, unsigned &iterations) {
+long double
+RadiceQuadrata(unsigned n, long double epsilon, unsigned& iterations) {
   long double result;
   long double result_new = 1;
 
   iterations = 0;
 
   do {
-    result = result_new;
+    result     = result_new;
     result_new = (result + (n / result)) / 2;
     iterations++;
 

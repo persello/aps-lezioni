@@ -3,21 +3,21 @@
 // Constructors
 
 Date::Date(unsigned d, unsigned m, unsigned y) : REF_YEAR(1970) {
-  day = d;
+  day   = d;
   month = m;
-  year = y;
+  year  = y;
 
   if (!Valid()) {
-    day = 1;
+    day   = 1;
     month = 1;
-    year = 1970;
+    year  = 1970;
   }
 }
 
 Date::Date() : REF_YEAR(1970) {
-  day = 1;
+  day   = 1;
   month = 1;
-  year = 1970;
+  year  = 1970;
 }
 
 // Public functions
@@ -43,7 +43,7 @@ void Date::Next() {
       day = 1;
       month++;
     } else {
-      day = 1;
+      day   = 1;
       month = 1;
       year++;
     }
@@ -58,7 +58,7 @@ void Date::Previous() {
       day = MonthDays();
       month--;
     } else {
-      day = 31;
+      day   = 31;
       month = 12;
       year--;
     }

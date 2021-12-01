@@ -1,0 +1,38 @@
+@startuml Cinema
+
+class Prenotazione {
+    nome_prenotante: stringa
+    numero_posti: intero
+}
+
+class Proiezione {
+    ora_inizio: orario
+    ora_fine: orario
+}
+
+class Film {
+    titolo: stringa
+    durata: intero
+}
+
+class Sala {
+    nome: stringa
+    posti: intero
+}
+
+class GestioneCinema {
+    nome: stringa
+
+    +InserisciProiezione(p: Proiezione)
+    +RimuoviProiezione(p: Proiezione)
+    +InserisciPrenotazione(pn: Prenotazione, p: Proiezione) : booleano
+    +CambiaOrario(p: Proiezione, i: Orario, f: Orario)
+    +CambiaSala(p: Proiezione, s: Sala)
+}
+
+Proiezione -u-> "*" Prenotazione
+Proiezione -l-> "1" Film
+Proiezione -r-> "1" Sala
+GestioneCinema -u-> "*" Proiezione
+
+@enduml

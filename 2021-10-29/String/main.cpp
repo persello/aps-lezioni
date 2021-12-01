@@ -12,6 +12,4 @@ int main() {
 
   string s, p("pluto");
   s = "pippo";
-
-
 }

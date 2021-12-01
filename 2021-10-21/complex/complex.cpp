@@ -32,16 +32,15 @@ Complex Complex::operator-() const { return Complex(-real, -imag); }
 
 // Infix operators
 
-Complex operator+(const Complex &a, const Complex &b) {
+Complex operator+(const Complex& a, const Complex& b) {
   return Complex(a.Real() + b.Real(), a.Imag() + b.Imag());
 }
 
-Complex operator-(const Complex &a, const Complex &b) { return a + (-b); }
+Complex operator-(const Complex& a, const Complex& b) { return a + (-b); }
 
-Complex operator*(const Complex &a, const Complex &b) {
+Complex operator*(const Complex& a, const Complex& b) {
   return Complex(a.Real() * b.Real() - a.Imag() * b.Imag(),
                  a.Real() * b.Imag() + a.Imag() * b.Real());
 }
 
-Complex operator/(const Complex &a, const Complex &b) {
-}
+Complex operator/(const Complex& a, const Complex& b) {}

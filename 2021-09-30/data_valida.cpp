@@ -1,5 +1,5 @@
-#include <iostream>
 #include "manipola_date.hpp"
+#include <iostream>
 
 using namespace std;
 
@@ -10,7 +10,8 @@ int main() {
 
   cout << (DataValida(giorno, mese, anno) ? "Valida" : "Non valida") << endl;
   DataPrecedente(giorno, mese, anno);
-  cout << "La data precedente è " << giorno << "/" << mese << "/" << anno << endl;
+  cout << "La data precedente è " << giorno << "/" << mese << "/" << anno
+       << endl;
 }
 
 bool DataValida(unsigned giorno, unsigned mese, unsigned anno) {

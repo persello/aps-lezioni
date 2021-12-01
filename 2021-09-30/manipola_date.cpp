@@ -18,7 +18,7 @@ bool Bisestile(unsigned anno) {
   return ((anno % 4 == 0) && !(anno % 100 == 0)) || (anno % 400 == 0);
 }
 
-void DataSuccessiva(unsigned &giorno, unsigned &mese, unsigned &anno) {
+void DataSuccessiva(unsigned& giorno, unsigned& mese, unsigned& anno) {
   if (giorno < GiorniDelMese(mese, anno)) {
     giorno++;
   } else {
@@ -27,13 +27,13 @@ void DataSuccessiva(unsigned &giorno, unsigned &mese, unsigned &anno) {
       mese++;
     } else {
       giorno = 1;
-      mese = 1;
+      mese   = 1;
       anno++;
     }
   }
 }
 
-void DataPrecedente(unsigned &giorno, unsigned &mese, unsigned &anno) {
+void DataPrecedente(unsigned& giorno, unsigned& mese, unsigned& anno) {
   if (giorno > 1) {
     giorno--;
   } else {

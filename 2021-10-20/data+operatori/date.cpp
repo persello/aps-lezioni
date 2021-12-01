@@ -3,21 +3,21 @@
 // Constructors
 
 Date::Date(unsigned d, unsigned m, unsigned y) : REF_YEAR(1970) {
-  day = d;
+  day   = d;
   month = m;
-  year = y;
+  year  = y;
 
   if (!Valid()) {
-    day = 1;
+    day   = 1;
     month = 1;
-    year = 1970;
+    year  = 1970;
   }
 }
 
 Date::Date() : REF_YEAR(1970) {
-  day = 1;
+  day   = 1;
   month = 1;
-  year = REF_YEAR;
+  year  = REF_YEAR;
 }
 
 // Public functions
@@ -43,7 +43,7 @@ void Date::operator++() {
       day = 1;
       month++;
     } else {
-      day = 1;
+      day   = 1;
       month = 1;
       year++;
     }
@@ -58,7 +58,7 @@ void Date::operator--() {
       month--;
       day = MonthDays();
     } else {
-      day = 31;
+      day   = 31;
       month = 12;
       year--;
     }
@@ -94,18 +94,19 @@ Date Date::operator+(int n) const {
 }
 
 // Friend functions
-bool operator==(const Date &d1, const Date &d2) {
+bool operator==(const Date& d1, const Date& d2) {
   return d1.day == d2.day && d1.month == d2.month && d1.year == d2.year;
 }
 
-bool operator<(const Date &d1, const Date &d2) {
+bool operator<(const Date& d1, const Date& d2) {
   return d1.year < d2.year || (d1.year == d2.year && d1.month < d2.month) ||
          (d1.year == d2.year && d1.month == d2.month && d1.day < d2.day);
 }
 
-bool operator<=(const Date &d1, const Date &d2) {
+bool operator<=(const Date& d1, const Date& d2) {
   return d1.year < d2.year || (d1.year == d2.year && d1.month < d2.month) ||
-         (d1.year == d2.year && d1.month == d2.month && d1.day <= d2.day);}
+         (d1.year == d2.year && d1.month == d2.month && d1.day <= d2.day);
+}
 
 // Private functions
 

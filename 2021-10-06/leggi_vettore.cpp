@@ -2,8 +2,8 @@
 
 using namespace std;
 
-int *LeggiVettore(unsigned n) {
-  int *q;
+int* LeggiVettore(unsigned n) {
+  int*     q;
   unsigned i;
 
   q = new int[n];
@@ -17,7 +17,7 @@ int *LeggiVettore(unsigned n) {
 }
 
 int main() {
-  int *p;
+  int*     p;
   unsigned n, i;
 
   cout << "Inserisci la lunghezza del vettore: ";

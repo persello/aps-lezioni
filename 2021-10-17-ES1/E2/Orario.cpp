@@ -3,7 +3,7 @@
 
 Orario::Orario() : SECONDI_GIORNO(86400) {
   time_t t = time(0);
-  secondi = t % SECONDI_GIORNO;
+  secondi  = t % SECONDI_GIORNO;
 }
 
 Orario::Orario(unsigned ore, unsigned minuti, unsigned secondi)

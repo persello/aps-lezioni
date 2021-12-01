@@ -33,13 +33,13 @@ int main() {
   d += -10;
   Date d2 = d + 10;
 
-  cout << "Nuova data: " << d2.Day() << "/"
-       << d2.Month() << "/" << d2.Year() << endl;
+  cout << "Nuova data: " << d2.Day() << "/" << d2.Month() << "/" << d2.Year()
+       << endl;
 
   cout << "d e d2 " << (d == d2 ? "" : "non ") << "sono uguali" << endl;
 
   cout << "Sottraggo 10 giorni a d2." << endl;
-  
+
   d2 += -10;
 
   cout << "d e d2 " << (d == d2 ? "" : "non ") << "sono uguali" << endl;

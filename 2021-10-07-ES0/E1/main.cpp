@@ -4,7 +4,7 @@ using namespace std;
 bool NumeroPrimo(unsigned);
 
 int main() {
-  int n;
+  int  n;
   bool primo;
 
   do {

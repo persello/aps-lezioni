@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void StampaPiramide(unsigned);
+void     StampaPiramide(unsigned);
 unsigned LarghezzaRiga(unsigned);
 
 int main() {

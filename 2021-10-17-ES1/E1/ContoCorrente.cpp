@@ -8,7 +8,7 @@ ContoCorrente::ContoCorrente() : CENT_LIRE(19.3627) {
 }
 
 ContoCorrente::ContoCorrente(double tasso) : CENT_LIRE(19.3627) {
-  saldo = 0;
+  saldo       = 0;
   this->tasso = tasso;
 }
 

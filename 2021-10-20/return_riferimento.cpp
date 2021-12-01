@@ -9,7 +9,7 @@ int Max(int v[], unsigned n) {
 }
 
 // Identica a Max, ma restituisce un riferimento.
-int &MaxP(int v[], unsigned n) {
+int& MaxP(int v[], unsigned n) {
   unsigned i, m = 0;
 
   for (i = 1; i < n; i++)
@@ -28,7 +28,7 @@ int main() {
   // SBAGLIATO Max(w, 7) = 22;
   // Max(w, 7) non ha lvalue.
 
-  x = MaxP(w, 7);
+  x          = MaxP(w, 7);
   MaxP(w, 7) = 22;
   // Sono entrambi corretti.
   // v[m] vale 22.

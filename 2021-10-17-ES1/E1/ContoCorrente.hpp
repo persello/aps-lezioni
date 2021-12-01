@@ -5,7 +5,7 @@ public:
   ContoCorrente();
   ContoCorrente(double tasso);
 
-  double TassoInteresse() const { return tasso; };
+  double   TassoInteresse() const { return tasso; };
   unsigned SaldoInEuro() const { return saldo / 100; };
   unsigned SaldoCentesimi() const { return saldo % 100; };
   unsigned SaldoInLire() const {
@@ -18,7 +18,7 @@ public:
   void AggiornaSaldo();
 
 private:
-  unsigned saldo;
-  double tasso;
+  unsigned     saldo;
+  double       tasso;
   const double CENT_LIRE;
 };

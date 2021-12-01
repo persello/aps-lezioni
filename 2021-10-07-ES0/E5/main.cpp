@@ -2,9 +2,9 @@
 
 using namespace std;
 
-const int DIM_VET = 6;
+const int DIM_VET   = 6;
 const int NUM_RIGHE = 2;
-const int NUM_COL = 3;
+const int NUM_COL   = 3;
 
 int NumeroDistintiVettore(int v[], int n);
 int NumeroDistintiMatrice(int m[][NUM_COL], int righe, int col);
@@ -15,23 +15,21 @@ int main() {
   int i, j;
 
   cout << "Inserisci un vettore di " << DIM_VET << " valori interi : ";
-  for (i = 0; i < DIM_VET; i++)
-    cin >> vett[i];
+  for (i = 0; i < DIM_VET; i++) cin >> vett[i];
   cout << "Il numero di elementi distinti del vettore e' "
        << NumeroDistintiVettore(vett, DIM_VET) << endl;
 
   cout << "Inserisci una matrice di " << NUM_RIGHE << " righe e " << NUM_COL
        << " colonne" << endl;
   for (i = 0; i < NUM_RIGHE; i++)
-    for (j = 0; j < NUM_COL; j++)
-      cin >> mat[i][j];
+    for (j = 0; j < NUM_COL; j++) cin >> mat[i][j];
 
   cout << "Il numero di elementi distinti della matrice e' "
        << NumeroDistintiMatrice(mat, NUM_RIGHE, NUM_COL) << endl;
 }
 
 int NumeroDistintiVettore(int v[], int n) {
-  int distinti[DIM_VET];
+  int      distinti[DIM_VET];
   unsigned num_distinti = 0;
 
   // Per ogni elemento di v
@@ -57,7 +55,7 @@ int NumeroDistintiVettore(int v[], int n) {
 }
 
 int NumeroDistintiMatrice(int m[][NUM_COL], int righe, int col) {
-  int distinti[DIM_VET];
+  int      distinti[DIM_VET];
   unsigned num_distinti = 0;
 
   // Per ogni elemento di m

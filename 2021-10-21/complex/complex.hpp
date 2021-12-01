@@ -2,10 +2,10 @@
 
 class Complex {
 
-  friend Complex operator+(const Complex &, const Complex &);
-  friend Complex operator-(const Complex &, const Complex &);
-  friend Complex operator*(const Complex &, const Complex &);
-  friend Complex operator/(const Complex &, const Complex &);
+  friend Complex operator+(const Complex&, const Complex&);
+  friend Complex operator-(const Complex&, const Complex&);
+  friend Complex operator*(const Complex&, const Complex&);
+  friend Complex operator/(const Complex&, const Complex&);
 
 public:
   Complex(double real, double imag);

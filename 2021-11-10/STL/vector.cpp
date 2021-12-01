@@ -1,10 +1,10 @@
-#include <vector>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main() {
-  vector<int> v1, v2(10), v3(20, 3), v4{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  vector<int> v1, v2(10), v3(20, 3), v4 {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
   // v1: vettore vuoto
   // v2: vettore di 10 elementi tutti inizializzati a 0
@@ -30,13 +30,13 @@ int main() {
   v1.resize(20, 3);
 
   // Pulizia
-  v1.clear(); // Equivale a v1.resize(0)
+  v1.clear();  // Equivale a v1.resize(0)
 
   // Attenzione: funziona come i vecchi vettori! (per motivi di velocità)
   // v1[100] = 3; // Errore! Potrebbe essere fuori dai limiti
-  
+
   // Un metodo alternativo robusto
-  v1.at(100) = 3; // Equivale a v1[100] = 3;
+  v1.at(100) = 3;  // Equivale a v1[100] = 3;
 
   // Cancelliamo il secondo elemento
   v1.erase(v1.begin() + 1);

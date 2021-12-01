@@ -6,21 +6,21 @@ using namespace std;
 // Constructors
 
 Date::Date(unsigned d, unsigned m, unsigned y) : REF_YEAR(1970) {
-  day = d;
+  day   = d;
   month = m;
-  year = y;
+  year  = y;
 
   if (!Valid()) {
-    day = 1;
+    day   = 1;
     month = 1;
-    year = REF_YEAR;
+    year  = REF_YEAR;
   }
 }
 
 Date::Date() : REF_YEAR(1970) {
-  day = 1;
+  day   = 1;
   month = 1;
-  year = REF_YEAR;
+  year  = REF_YEAR;
 }
 
 // Public functions
@@ -38,7 +38,7 @@ bool Date::IsLeapYear() const {
   return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
 
-Date &Date::operator++() {
+Date& Date::operator++() {
   if (day < MonthDays()) {
     day++;
   } else {
@@ -46,7 +46,7 @@ Date &Date::operator++() {
       day = 1;
       month++;
     } else {
-      day = 1;
+      day   = 1;
       month = 1;
       year++;
     }
@@ -55,7 +55,7 @@ Date &Date::operator++() {
   return *this;
 }
 
-Date &Date::operator--() {
+Date& Date::operator--() {
   if (day > 1) {
     day--;
   } else {
@@ -63,7 +63,7 @@ Date &Date::operator--() {
       month--;
       day = MonthDays();
     } else {
-      day = 31;
+      day   = 31;
       month = 12;
       year--;
     }
@@ -101,33 +101,33 @@ Date Date::operator+(int n) const {
 }
 
 // Friend functions
-bool operator==(const Date &d1, const Date &d2) {
+bool operator==(const Date& d1, const Date& d2) {
   return d1.day == d2.day && d1.month == d2.month && d1.year == d2.year;
 }
 
-bool operator<(const Date &d1, const Date &d2) {
+bool operator<(const Date& d1, const Date& d2) {
   return d1.year < d2.year || (d1.year == d2.year && d1.month < d2.month) ||
          (d1.year == d2.year && d1.month == d2.month && d1.day < d2.day);
 }
 
-bool operator<=(const Date &d1, const Date &d2) {
+bool operator<=(const Date& d1, const Date& d2) {
   return d1.year < d2.year || (d1.year == d2.year && d1.month < d2.month) ||
          (d1.year == d2.year && d1.month == d2.month && d1.day <= d2.day);
 }
 
-ostream &operator<<(ostream &os, const Date &d) {
+ostream& operator<<(ostream& os, const Date& d) {
   os << d.day << "/" << d.month << "/" << d.year;
   return os;
 }
 
-istream &operator>>(istream &is, Date &d) {
+istream& operator>>(istream& is, Date& d) {
   char c;
   is >> d.day >> c >> d.month >> c >> d.year;
 
   if (!d.Valid()) {
-    d.day = 1;
+    d.day   = 1;
     d.month = 1;
-    d.year = d.REF_YEAR;
+    d.year  = d.REF_YEAR;
   }
 
   return is;

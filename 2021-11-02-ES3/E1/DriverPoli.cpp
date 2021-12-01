@@ -16,7 +16,7 @@ int main() {
   // ---------- POLINOMIO CON 2 PARAMETRI ----------
   cout << "Test polinomio con 2 parametri. Inserire grado e coefficiente [deg "
           "coeff]: ";
-  int deg;
+  int    deg;
   double coeff;
 
   cin >> deg >> coeff;
@@ -60,6 +60,4 @@ int main() {
 
   cout << "Polinomio 3 (modificato): " << poli_3 << endl;
   cout << "Polinomio 4 (non deve subire modifiche): " << poli_4 << endl;
-
-
 }

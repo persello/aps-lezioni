@@ -12,6 +12,6 @@ public:
   void SommaSecondi(int s);
 
 private:
-  int secondi;
+  int            secondi;
   const unsigned SECONDI_GIORNO;
 };

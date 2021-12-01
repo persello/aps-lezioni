@@ -10,8 +10,8 @@ void AllicazioneStatica() {
 }
 
 void AllocazioneDinamica() {
-  int n;
-  int *p;
+  int  n;
+  int* p;
 
   cout << "Dimensione array: ";
   cin >> n;

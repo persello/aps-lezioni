@@ -5,14 +5,14 @@
 // Costruttori
 Poli::Poli() {
   size = 0;
-  vec = nullptr;
+  vec  = nullptr;
 }
 
-Poli::Poli(const Poli &p) {
+Poli::Poli(const Poli& p) {
 
   if (p.size == 0) {
     size = 0;
-    vec = nullptr;
+    vec  = nullptr;
     return;
   }
 
@@ -40,11 +40,11 @@ double Poli::operator[](int deg) const {
   return 0;
 }
 
-double &Poli::operator[](int deg) {
+double& Poli::operator[](int deg) {
   if (deg >= size) {
     // Vettore ausiliario per nuovi coefficienti.
-    int newSize = deg + 1;
-    double *aux = new double[newSize];
+    int     newSize = deg + 1;
+    double* aux     = new double[newSize];
 
     // Riempie il vettore coi vecchi coefficienti (o zero altrove).
     // Non è necessario controllare gli indici: per gradi superiori al massimo
@@ -58,13 +58,13 @@ double &Poli::operator[](int deg) {
       delete[] vec;
     }
     size = newSize;
-    vec = aux;
+    vec  = aux;
   }
 
   return vec[deg];
 }
 
-Poli &Poli::operator=(const Poli &p) {
+Poli& Poli::operator=(const Poli& p) {
 
   // Sfrutto l'operatore precedente. Vado all'indietro così da causare una
   // singola allocazione.
@@ -86,9 +86,9 @@ double Poli::operator()(double x) const {
 }
 
 // Operatori friend
-Poli operator+(const Poli &a, const Poli &b) {
+Poli operator+(const Poli& a, const Poli& b) {
   Poli result;
-  int size = max(a.size, b.size);
+  int  size = max(a.size, b.size);
   for (int i = size - 1; i >= 0; i--) {
     result[i] = a[i] + b[i];
   }
@@ -96,9 +96,9 @@ Poli operator+(const Poli &a, const Poli &b) {
   return result;
 }
 
-Poli operator-(const Poli &a, const Poli &b) {
+Poli operator-(const Poli& a, const Poli& b) {
   Poli result;
-  int size = max(a.size, b.size);
+  int  size = max(a.size, b.size);
   for (int i = size - 1; i >= 0; i--) {
     result[i] = a[i] - b[i];
   }
@@ -106,7 +106,7 @@ Poli operator-(const Poli &a, const Poli &b) {
   return result;
 }
 
-ostream &operator<<(ostream &os, const Poli &p) {
+ostream& operator<<(ostream& os, const Poli& p) {
 
   // Caso speciale: se abbiamo un polinomio nullo,
   // mostriamo il termine di grado zero.
@@ -135,10 +135,10 @@ ostream &operator<<(ostream &os, const Poli &p) {
   return os;
 }
 
-istream &operator>>(istream &is, Poli &p) {
-  char c;
+istream& operator>>(istream& is, Poli& p) {
+  char   c;
   double coeff;
-  int exp;
+  int    exp;
 
   // Leggi fino a '<'.
   do {

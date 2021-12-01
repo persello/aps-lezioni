@@ -6,18 +6,18 @@ public:
   Date();
 
   unsigned MonthDays() const;
-  bool IsLeapYear() const;
-  void Next();
-  void Previous();
+  bool     IsLeapYear() const;
+  void     Next();
+  void     Previous();
 
   unsigned Day() const { return day; }
   unsigned Month() const { return month; }
   unsigned Year() const { return year; }
 
 private:
-  bool Valid() const;
-  unsigned day;
-  unsigned month;
-  unsigned year;
+  bool           Valid() const;
+  unsigned       day;
+  unsigned       month;
+  unsigned       year;
   const unsigned REF_YEAR;
 };

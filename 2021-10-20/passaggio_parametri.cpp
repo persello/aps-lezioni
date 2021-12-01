@@ -21,7 +21,7 @@ public:
   int x;
 };
 
-int F(const A &a) {
+int F(const A& a) {
 
   // Non è possibile modificare l'oggetto passato per riferimento.
 

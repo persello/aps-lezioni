@@ -6,10 +6,10 @@
 using namespace std;
 
 pair<unsigned, unsigned> CalcolaMeseFrequente(string filename);
-pair<string, unsigned> CalcolaNomeFrequente(string filename);
-vector<Person> LeggiPersone(string filename);
+pair<string, unsigned>   CalcolaNomeFrequente(string filename);
+vector<Person>           LeggiPersone(string filename);
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
   string filename;
 
   if (argc != 2) {
@@ -43,8 +43,8 @@ int main(int argc, char *argv[]) {
 
 vector<Person> LeggiPersone(string filename) {
   vector<Person> persone;
-  Person persona;
-  ifstream file(filename);
+  Person         persona;
+  ifstream       file(filename);
 
   while (file >> persona) {
     persone.push_back(persona);
@@ -54,10 +54,10 @@ vector<Person> LeggiPersone(string filename) {
 }
 
 pair<unsigned, unsigned> CalcolaMeseFrequente(string filename) {
-  Person persona;
+  Person           persona;
   vector<unsigned> occorrenze(12, 0);
-  ifstream file(filename);
-  unsigned maxIndex = 0;
+  ifstream         file(filename);
+  unsigned         maxIndex = 0;
 
   while (file >> persona) {
     unsigned month = persona.BirthDate().Month() - 1;
@@ -71,11 +71,11 @@ pair<unsigned, unsigned> CalcolaMeseFrequente(string filename) {
 }
 
 pair<string, unsigned> CalcolaNomeFrequente(string filename) {
-  Person persona;
-  ifstream file(filename);
+  Person                         persona;
+  ifstream                       file(filename);
   vector<pair<string, unsigned>> occorrenze;
-  bool trovato;
-  unsigned maxIndex = 0;
+  bool                           trovato;
+  unsigned                       maxIndex = 0;
 
   while (file >> persona) {
     trovato = false;
