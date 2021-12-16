@@ -1,0 +1,25 @@
+@startuml Videopoker
+
+class Carta {
+    +seme: Seme
+    +valore: Valore
+}
+
+class Mazzo {
+
+}
+
+class Mano {
+
+}
+
+class VideoPoker {
+
+}
+
+
+Mazzo "1" -u-- "*" Carta
+Mano -u-- "5" Carta
+Mano "*" -l-> "1" Mazzo
+VideoPoker -u-- "1" Mano
+VideoPoker -u-- "1" Mazzo
