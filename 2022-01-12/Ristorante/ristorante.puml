@@ -1,0 +1,19 @@
+@startuml Ristorante
+
+class Ristorante {
+    +nome: string
+
+    +AggiungiPersona()
+    +LiberaTavolo()
+    +ModificaTavolo()
+}
+
+class Tavolo {
+    +AggiungiPersona()
+}
+
+class Persona {
+}
+
+Ristorante o--r-> "1..*" Tavolo
+Tavolo "1" --r> "*" Persona

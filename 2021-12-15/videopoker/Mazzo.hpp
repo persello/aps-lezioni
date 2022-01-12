@@ -3,6 +3,4 @@
 #include <iostream>
 #include <vector>
 
-class Mazzo {
-    
-}
+class Mazzo {};
